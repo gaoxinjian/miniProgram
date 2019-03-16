@@ -64,14 +64,6 @@ image {
   height: 100%;
 }
 
-.animation-container > image {
-  position: absolute;
-  width: 200%;
-  height: 200%;
-  top: -50%;
-  left: 0;
-}
-
 .hahaha {
   position: absolute;
   width: 100%;
@@ -80,7 +72,7 @@ image {
   background-color: #fff;
 }
 
-.hidden-view{
+.hidden-view {
   position: absolute;
   width: 100%;
   height: 300rpx;
@@ -88,4 +80,24 @@ image {
   top: 745rpx;
   left: 0;
   background-color: #fff;
+}
+
+.animation-container > image {
+  position: absolute;
+}
+
+.animation-container > .image1 {
+  width: 200%;
+  height: 200%;
+  top: -50%;
+  left: 0;
+  z-index: 11;
+}
+
+.animation-container > .image2 {
+  width: 170%;
+  height: 170%;
+  top: -35%;
+  left: 15%;
+  z-index: 12;
 }

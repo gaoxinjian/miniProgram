@@ -1,7 +1,6 @@
 //index.js
 //获取应用实例
 const app = getApp()
-
 const roles = require('../../utils/roles')
 
 Page({
@@ -10,20 +9,28 @@ Page({
     ssrList: [],
     srListShow: false,
     srList: [],
-    animationData: {}
+    animationData1: {},
+    animationData2: {},
   },
   onShow: function(){
-    const animation = wx.createAnimation({
+    const animation1 = wx.createAnimation({
+      duration: 3000,
+      timingFunction: 'ease',
+    })
+    const animation2 = wx.createAnimation({
       duration: 3000,
       timingFunction: 'ease',
     })
 
-    this.animation = animation
+    this.animation1 = animation1
+    this.animation2 = animation2
 
-    animation.rotate(360).step()
+    animation1.rotate(360).step()
+    animation2.rotate(360).step()
 
     this.setData({
-      animationData: animation.export()
+      animationData1: animation1.export(),
+      animationData2: animation2.export()
     })
 
   },

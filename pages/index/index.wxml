@@ -22,7 +22,8 @@
   <view class='yyy-container'>
     <view class='left-block'></view>
     <view class='animation-container'>
-      <image animation="{{animationData}}" src='../../images/dizhi1.png'></image>
+      <image class='image1' animation="{{animationData1}}" src='../../images/dizhi1.png'></image>
+      <image class='image2' animation="{{animationData2}}" src='../../images/dizhi2.png'></image>
     </view>
   </view>
 
