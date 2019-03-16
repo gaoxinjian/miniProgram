@@ -1,0 +1,90 @@
+/* pages/add/add.wxss */
+.container{
+  padding: 0;
+  text-align: left;
+  display: block;
+}
+.skill-tree-container{
+  margin-top: 120rpx;
+  padding-bottom: 200rpx;
+}
+image{
+  width: 80rpx;
+  height: 80rpx;
+}
+.role-info{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 8rpx 20rpx;
+  font-size: 14px;
+}
+.role-name{
+  margin: 0 30rpx;
+}
+.row{
+  display: flex;
+  justify-content: flex-start;
+  align-items: top;
+  width: 720rpx;
+  margin-left: 40rpx;
+}
+.row > view{
+  width: 120rpx;
+  height: 120rpx;
+  font-size: 10px;
+  position: relative;
+  border: 1px solid #fff;
+  border-bottom: none;
+}
+.row .skill-name{
+  width: 80rpx;
+  height: 80rpx;
+  border: 1px solid #aaa;
+  border-radius: 40rpx;
+  position: absolute;
+  top: -40rpx;
+  left: -40rpx;
+  z-index: 1001;
+  background-color: #aaa;
+  color: #fff;
+  text-align: center;
+  line-height: 24rpx;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+.row > text{
+  width: 80rpx;
+  text-align: center;
+  line-height: 80rpx;
+  display: inline-block;
+  margin-right: 40rpx;
+  margin-top: -40rpx;
+}
+.row .line-to-bottom{
+  border-left: 1px solid #343434;
+}
+.row .line-to-left{
+  border-top: 1px solid #343434;
+}
+.row .active-skill{
+  background-color: #367ee8;
+}
+.skill-btn{
+  position:fixed;
+  left:0;
+  bottom:0;
+  width:100%;
+  z-index:2000;
+  background-color:#eee;
+}
+.reset{
+  position:absolute;
+  top:0;
+  right:0;
+}
+.current-skill-desc{
+  font-size: 12px;
+}

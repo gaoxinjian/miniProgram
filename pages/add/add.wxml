@@ -1,0 +1,56 @@
+<!--pages/add/add.wxml-->
+<view class='container'>
+  <view class='role-info'>
+    <image src='{{avatar}}'></image>
+    <text class='role-name'>{{role_name}}</text>
+    <text class='last-points'>剩余点数：{{last_points}}</text>
+  </view>
+
+  <view class='skill-tree-container'>
+    <view class='row' wx:for="{{skills_arr}}" wx:key="{{index}}">
+      <text>{{item[0].skill_level}}</text>
+      <view class='col-01 {{item[0].line[1] ? "line-to-left" : ""}} {{item[0].line[2] ? "line-to-bottom" : ""}}'>
+        <view class='skill-name {{item[0].skill_id == active_skill ? "active-skill" : ""}}' wx:if="{{item[0].skill_name}}" data-skill-id="{{item[0].skill_id}}" bindtap="selectActiveSkill">
+          <text>{{item[0].skill_name}}</text>
+          <text>{{item[0].current_level}}/{{item[0].skill_type == 4 ? 10 : 20}}</text>
+        </view>
+      </view>
+      <view class='col-02 {{item[1].line[1] ? "line-to-left" : ""}} {{item[1].line[2] ? "line-to-bottom" : ""}}'>
+        <view class='skill-name {{item[1].skill_id == active_skill ? "active-skill" : ""}}' wx:if="{{item[1].skill_name}}" data-skill-id="{{item[1].skill_id}}" bindtap="selectActiveSkill">
+          <text>{{item[1].skill_name}}</text>
+          <text>{{item[1].current_level}}/{{item[1].skill_type == 4 ? 10 : 20}}</text>
+        </view>
+      </view>
+      <view class='col-03 {{item[2].line[1] ? "line-to-left" : ""}} {{item[2].line[2] ? "line-to-bottom" : ""}}'>
+        <view class='skill-name {{item[2].skill_id == active_skill ? "active-skill" : ""}}' wx:if="{{item[2].skill_name}}" data-skill-id="{{item[2].skill_id}}" bindtap="selectActiveSkill">
+          <text>{{item[2].skill_name}}</text>
+          <text>{{item[2].current_level}}/{{item[2].skill_type == 4 ? 10 : 20}}</text>
+        </view>
+      </view>
+      <view class='col-04 {{item[3].line[1] ? "line-to-left" : ""}} {{item[3].line[2] ? "line-to-bottom" : ""}}'>
+        <view class='skill-name {{item[3].skill_id == active_skill ? "active-skill" : ""}}' wx:if="{{item[3].skill_name}}" data-skill-id="{{item[3].skill_id}}" bindtap="selectActiveSkill">
+          <text>{{item[3].skill_name}}</text>
+          <text>{{item[3].current_level}}/{{item[3].skill_type == 4 ? 10 : 20}}</text>
+        </view>
+      </view>
+      <view class='col-05 {{item[4].line[1] ? "line-to-left" : ""}} {{item[4].line[2] ? "line-to-bottom" : ""}}'>
+        <view class='skill-name {{item[4].skill_id == active_skill ? "active-skill" : ""}}' wx:if="{{item[4].skill_name}}" data-skill-id="{{item[4].skill_id}}" bindtap="selectActiveSkill">
+          <text>{{item[4].skill_name}}</text>
+          <text>{{item[4].current_level}}/{{item[4].skill_type == 4 ? 10 : 20}}</text>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class='reset'>
+    <button bindtap='reset'>重置</button>
+  </view>
+  <view class='skill-btn'>
+    <view class='current-skill-desc'>
+      <text>技能类型:{{active_skill_detail.skill_type_desc}}{{active_skill_detail.pre_level ? (",前置" + active_skill_detail.pre_level + "级") : ""}}</text>
+    </view>
+    <view class='current-skill-desc'>
+      <text>技能描述:{{active_skill_detail.desc}}</text>
+    </view>
+    <button bindtap="upgradeFunc">+</button>
+  </view>
+</view>

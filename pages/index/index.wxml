@@ -1,0 +1,30 @@
+<!--index.wxml-->
+<view class="container">
+  <view class='hahaha'>
+    <view class='ssr-title' bindtap='ssrListShowFunc'>SSR</view>
+    <block wx:if="{{ssrListShow}}">
+      <view class='role-container' wx:for="{{ssrList}}" wx:key="{{item.id}}" data-id="{{item.id}}" bindtap='jumpToAdd'>
+        <image src='{{item.avatar}}'></image>
+        <view class='role-name'>{{item.name}}</view>
+      </view>
+    </block>
+
+    <view class='sr-title' bindtap='srListShowFunc'>SR</view>
+    <block wx:if="{{srListShow}}">
+      <view class='role-container' wx:for="{{srList}}" wx:key="{{item.id}}" data-id="{{item.id}}" bindtap='jumpToAdd'>
+        <image src='{{item.avatar}}'></image>
+        <view class='role-name'>{{item.name}}</view>
+      </view>
+    </block>
+  </view>
+
+
+  <view class='yyy-container'>
+    <view class='left-block'></view>
+    <view class='animation-container'>
+      <image animation="{{animationData}}" src='../../images/dizhi1.png'></image>
+    </view>
+  </view>
+
+  <view class='hidden-view'></view>
+</view>
