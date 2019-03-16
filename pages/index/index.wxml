@@ -1,6 +1,6 @@
 <!--index.wxml-->
 <view class="container">
-  <view class='hahaha'>
+  <!-- <view class='hahaha'>
     <view class='ssr-title' bindtap='ssrListShowFunc'>SSR</view>
     <block wx:if="{{ssrListShow}}">
       <view class='role-container' wx:for="{{ssrList}}" wx:key="{{item.id}}" data-id="{{item.id}}" bindtap='jumpToAdd'>
@@ -16,16 +16,15 @@
         <view class='role-name'>{{item.name}}</view>
       </view>
     </block>
-  </view>
+  </view> -->
 
-
-  <view class='yyy-container'>
-    <view class='left-block'></view>
-    <view class='animation-container'>
-      <image class='image1' animation="{{animationData1}}" src='../../images/dizhi1.png'></image>
-      <image class='image2' animation="{{animationData2}}" src='../../images/dizhi2.png'></image>
+  <view>
+    <view class='l-box'></view>
+    <view class='r-box'>
+      <canvas class='canvas1' canvas-id='canvas1' style='width:{{canvasWidth}}px; height:{{canvasHeight}}px'></canvas>
+      <!-- canvas是原生组件，普通的image无法覆盖上去 -->
+      <cover-image class='word1' wx:if="{{word1Show}}" src='../../images/xu.png'></cover-image>
+      <canvas class='canvas2' canvas-id='canvas2' style='width:{{canvasWidth}}px; height:{{canvasHeight}}px;'></canvas>
     </view>
   </view>
-
-  <view class='hidden-view'></view>
 </view>
